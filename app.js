@@ -4,10 +4,11 @@ const itemRoutes = require('./items')
 
 const app = express();
 
+app.use(express.json());
+
 // Routes Section
 
 app.use('/items', itemRoutes);
-
 
 // Error handler Section
 app.use((req, res, next) => {
